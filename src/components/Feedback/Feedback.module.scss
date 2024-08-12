@@ -1,0 +1,253 @@
+.Feedback {
+  padding: 81px 0 78px;
+
+  @media (max-width: 1023px) {
+    padding: 58px 0 56px;
+  }
+
+  @media (max-width: 590px) {
+    padding: 59px 0 56px;
+  }
+}
+
+.SectionTitle {
+  margin: 0 0 43px;
+  font-size: var(--font-headline2);
+  font-weight: 600;
+  line-height: var(--line-headline2);
+  text-align: center;
+
+  @media (max-width: 1023px) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 590px) {
+    margin-bottom: 27px;
+    font-size: var(--font-headline4);
+    line-height: var(--line-headline4);
+  }
+}
+
+.Form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.Content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 32px;
+  row-gap: 27px;
+
+  @media (max-width: 590px) {
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+  }
+}
+
+.Element {
+  position: relative;
+}
+
+.Input {
+  width: 100%;
+  transition: opacity var(--trans-default);
+  will-change: opacity;
+  transform: translateZ(0);
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  label {
+    display: block;
+    width: 100%;
+    transform: translateZ(0);
+  }
+
+  input {
+    width: 100%;
+    min-height: 64px;
+    padding: 28px 48px 4px 16px;
+
+    font-size: var(--font-body18);
+    line-height: var(--line-body18);
+    color: var(--color-black);
+    background-color: var(--color-extralight-gray);
+    border: 2px solid var(--color-extralight-gray);
+    border-radius: 4px;
+    transform: translateZ(0);
+    transition: border-color var(--trans-default), background-color var(--trans-default);
+    will-change: border-color, background-color;
+
+    &:focus,
+    &[data-invalid='true']:focus,
+    &:not([data-value='0']) {
+      border-color: var(--color-mid-grey);
+      background-color: transparent;
+    }
+
+    &:not([data-value='0']) + .Text,
+    &:focus + .Text {
+      top: 8px;
+      color: var(--color-gray);
+      font-size: var(--font-body14);
+      line-height: var(--line-body14);
+    }
+
+    &[data-invalid='true'] {
+      border-color: var(--color-dangerous);
+    }
+
+    &[data-invalid='true'] ~ .Icon > svg:first-child {
+      opacity: 1;
+    }
+
+    &[data-value]:not([data-value='0']) ~ .Icon > svg:last-child {
+      opacity: 1;
+    }
+
+    &[data-value]:not([data-value='0'])[data-invalid='true'] ~ .Icon > svg:last-child {
+      opacity: 0;
+    }
+  }
+
+  input::-webkit-input-placeholder {
+    color: var(--color-mid-grey);
+  }
+  input:-moz-placeholder {
+    color: var(--color-mid-grey);
+    opacity: 1;
+  }
+  input::-moz-placeholder {
+    color: var(--color-mid-grey);
+    opacity: 1;
+  }
+  input:-ms-input-placeholder {
+    color: var(--color-mid-grey);
+  }
+  input::-ms-input-placeholder {
+    color: var(--color-mid-grey);
+  }
+  input::placeholder {
+    color: var(--color-mid-grey);
+  }
+}
+
+.Icon {
+  position: absolute;
+  right: 22px;
+  top: 25px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  transform: translateZ(0);
+  user-select: none;
+  z-index: 1;
+
+  svg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity var(--trans-default);
+    will-change: opacity;
+    transform: translateZ(0);
+  }
+}
+
+.Text {
+  position: absolute;
+  left: 16px;
+  top: 18px;
+  font-size: var(--font-body18);
+  line-height: var(--line-body18);
+  transition: top var(--trans-default), color var(--trans-default), font-size var(--trans-default);
+  will-change: top, color, font-size;
+  transform: translateZ(0);
+  z-index: 1;
+}
+
+.Error {
+  margin: 5px 0 0;
+  font-size: var(--font-body12);
+  line-height: var(--line-body12);
+  color: var(--color-dangerous);
+}
+
+.Toggle {
+  label {
+    position: relative;
+  }
+
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+  }
+
+  input:checked ~ .IconCheck svg:last-child {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  input:focus ~ .IconCheck svg {
+    outline: auto 2px Highlight;
+    outline: auto 2px -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
+
+  input[data-invalid='true'] ~ .IconCheck {
+    color: var(--color-dangerous);
+  }
+}
+
+.IconCheck {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  color: var(--color-mid-grey);
+  transition: opacity var(--trans-default),
+    visibility var(--trans-default) color var(--trans-default);
+  will-change: opacity, visibility, color;
+  transform: translateZ(0);
+  cursor: pointer;
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+
+  svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateZ(0);
+  }
+
+  svg:last-child {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.AgreeText {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  font-size: var(--font-body16);
+  line-height: var(--line-body16);
+}
+
+.Button {
+  width: 100%;
+}
