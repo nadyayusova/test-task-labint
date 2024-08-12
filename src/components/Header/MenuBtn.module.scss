@@ -1,0 +1,46 @@
+.MenuBtn {
+  position: absolute;
+  right: -3px;
+  top: 9px;
+  display: none;
+  width: 62px;
+  height: 62px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  pointer-events: auto;
+  transition: opacity var(--trans-default);
+  will-change: opacity;
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    display: block;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 25px;
+    display: block;
+    width: 23px;
+    height: 2px;
+    background-color: var(--color-white);
+    transform: translateX(-50%);
+    transform-origin: 50% 50%;
+    transition: transform var(--trans-default);
+  }
+
+  &::after {
+    top: auto;
+    bottom: 25px;
+  }
+}

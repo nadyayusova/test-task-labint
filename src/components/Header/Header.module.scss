@@ -1,0 +1,64 @@
+.Header {
+  position: absolute;
+  width: 100%;
+  padding: 28px 0;
+  color: var(--color-white);
+  background-color: transparent;
+  text-decoration-color: var(--color-white);
+  overflow: hidden;
+  pointer-events: none;
+  transition: color var(--trans-default);
+  z-index: 1;
+
+  @media (max-width: 1023px) {
+    padding: 26px 0;
+  }
+}
+
+.Header.IsOpened {
+  @media (max-width: 1023px) {
+    color: var(--color-black);
+    pointer-events: all;
+
+    button::before {
+      background-color: var(--color-black);
+      transform: translateX(-50%) translateY(5px) rotate(-45deg);
+    }
+
+    button::after {
+      background-color: var(--color-black);
+      transform: translateX(-50%) translateY(-5px) rotate(45deg);
+    }
+  }
+}
+
+.HeaderNav.IsOpened {
+  @media (max-width: 1023px) {
+    opacity: 1;
+    pointer-events: all;
+
+    ul {
+      pointer-events: all;
+    }
+  }
+}
+
+.HeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.HeaderContainer.HeaderContainer {
+  @media (max-width: 1023px) {
+    --container-padding: 16px;
+  }
+}
+
+.HeaderLogo {
+  flex-shrink: 0;
+  width: 120px;
+  height: 24px;
+  margin-right: 80px;
+  pointer-events: auto;
+}

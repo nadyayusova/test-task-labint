@@ -1,0 +1,41 @@
+.MenuLink {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--font-body16);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--line-body16);
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+  text-decoration-skip-ink: none;
+  text-decoration-skip: none;
+  transition: text-decoration-color var(--trans-default);
+  will-change: text-decoration-color;
+  overflow-wrap: anywhere;
+
+  svg {
+    flex-shrink: 0;
+    display: none;
+    width: 7px;
+    height: 14px;
+    margin-top: 7px;
+    margin-right: 8px;
+    transform: rotate(180deg);
+  }
+
+  @media (max-width: 1023px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 15px;
+    font-size: var(--font-body18);
+    line-height: var(--line-body18);
+
+    svg {
+      display: block;
+    }
+  }
+}
