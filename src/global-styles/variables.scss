@@ -14,13 +14,10 @@
   --color-black: #191c1f;
   --color-dark-gray: #5e646a;
   --color-gray: #83898f;
-  --color-mid-gray: #c2c8cd;
+  --color-mid-grey: #c2c8cd;
   --color-light-gray: #eceff2;
   --color-extralight-gray: #f6f8fa;
   --color-white: #ffffff;
-
-  // Gradient
-  // --black-to-right: linear-gradient(90deg, rgba(0, 0, 0, 75%) 0%, rgba(0, 0, 0, 0%) 75%);
 
   // Typography
   --fz-default: 16px;
@@ -46,9 +43,9 @@
   --font-body14: 14px;
   --font-body12: 12px;
   --line-body18: 1.78;
-  --line-body18: 1.75;
-  --line-body18: 1.71;
-  --line-body18: 1.33;
+  --line-body16: 1.75;
+  --line-body14: 1.71;
+  --line-body12: 1.33;
 
   // Animation
   --tf-default: ease;
@@ -62,6 +59,8 @@
   --vp-1280: 1280px;
   --vp-1440: 1440px;
   --vp-1920: 1920px;
+
+  --container-padding: 52px;
 
   // Retina
   --retina-dpi: 144dpi;
