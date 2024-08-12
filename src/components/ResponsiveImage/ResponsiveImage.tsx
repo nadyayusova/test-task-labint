@@ -25,20 +25,20 @@ const ResponsiveImage: FC<ResponsiveImageProps> = ({
         <source
           type="image/webp"
           media="(max-width: 1023px)"
-          srcSet={`/images/${url}-mobile.webp, /images/${url}-mobile@2x.webp 2x`}
+          srcSet={`images/${url}-mobile.webp, images/${url}-mobile@2x.webp 2x`}
         />
         <source
           media="(max-width: 1023px)"
-          srcSet={`/images/${url}-mobile.jpg, /images/${url}-mobile@2x.jpg 2x`}
+          srcSet={`images/${url}-mobile.jpg, images/${url}-mobile@2x.jpg 2x`}
         />
         <source
           type="image/webp"
-          srcSet={`/images/${url}.webp, /images/${url}@2x.webp 2x`}
+          srcSet={`images/${url}.webp, images/${url}@2x.webp 2x`}
         />
         <img
           loading="lazy"
-          src={`/images/${url}.jpg`}
-          srcSet={`/images/${url}@2x.jpg`}
+          src={`images/${url}.jpg`}
+          srcSet={`images/${url}@2x.jpg`}
           width={width}
           height={height}
           alt={ariaHidden ? undefined : alt}

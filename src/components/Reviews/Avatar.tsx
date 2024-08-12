@@ -17,12 +17,12 @@ const Avatar: FC<AvatarProps> = ({url, width, height, alt = '', className = '', 
       <picture>
         <source
           type="image/webp"
-          srcSet={`/images/${url}.webp, /images/${url}@2x.webp 2x`}
+          srcSet={`images/${url}.webp, images/${url}@2x.webp 2x`}
         />
         <img
           loading="lazy"
-          src={`/images/${url}.jpg`}
-          srcSet={`/images/${url}@2x.jpg`}
+          src={`images/${url}.jpg`}
+          srcSet={`images/${url}@2x.jpg`}
           width={width}
           height={height}
           alt={ariaHidden ? undefined : alt}
