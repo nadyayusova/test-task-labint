@@ -1,0 +1,94 @@
+.Third {
+  padding: 40px 0 80px;
+
+  @media (max-width: 1023px) {
+    padding: 16px 0 56px;
+  }
+
+  @media (max-width: 360px) {
+    padding: 16px 0 57px;
+  }
+}
+
+.ThirdContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+
+  @media (max-width: 1023px) {
+    gap: 27px;
+  }
+
+  @media (max-width: 590px) {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  @media (max-width: 360px) {
+    gap: 28px;
+  }
+}
+
+.TextBlock {
+  align-self: center;
+
+  @media (max-width: 590px) {
+    grid-row: 2;
+  }
+}
+
+.ImageWrapper {
+  @media (max-width: 590px) {
+    grid-row: 1;
+  }
+}
+
+.SectionTitle {
+  margin: 0 0 20px;
+  font-size: var(--font-headline3);
+  font-weight: 600;
+  line-height: var(--line-headline3);
+  letter-spacing: -0.004em;
+
+  @media (max-width: 1023px) {
+    margin: 1px 0 17px;
+    font-size: var(--font-headline5);
+    line-height: var(--line-headline5);
+    letter-spacing: normal;
+  }
+
+  @media (max-width: 590px) {
+    margin: 0;
+    text-align: center;
+  }
+
+  @media (max-width: 360px) {
+    margin-bottom: 27px;
+  }
+}
+
+.Text {
+  margin: 0 0 27px;
+  font-size: var(--font-body16);
+  line-height: var(--line-body16);
+  color: var(--color-dark-gray);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 590px) {
+    text-align: center;
+  }
+}
+
+.IntroBg {
+  &::before {
+    display: none;
+  }
+
+  img {
+    position: static;
+    object-fit: contain;
+  }
+}
