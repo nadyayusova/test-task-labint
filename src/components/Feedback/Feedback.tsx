@@ -18,7 +18,6 @@ const Feedback: FC = () => {
     watch,
   } = useForm({mode: 'onBlur'});
 
-  // const phoneRegex = new RegExp(/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/);
   const phoneRegex = new RegExp(/^(8|\+7)[\d]{10}$/);
 
   const watchValues = watch();
