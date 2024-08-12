@@ -1,0 +1,90 @@
+.Reviews {
+  position: relative;
+  padding: 57px 0 45px;
+  background-color: var(--color-extralight-gray);
+
+  @media (max-width: 1023px) {
+    padding: 33px 0 45px;
+  }
+
+  @media (max-width: 590px) {
+    padding: 28px 0 36px;
+  }
+
+  @media (max-width: 360px) {
+    padding: 28px 0 30px;
+  }
+}
+
+.SectionTitle {
+  margin: 0;
+  font-size: var(--font-headline2);
+  font-weight: 600;
+  line-height: var(--line-headline2);
+  text-align: center;
+
+  @media (max-width: 590px) {
+    font-size: var(--font-headline4);
+    line-height: var(--line-headline4);
+  }
+}
+
+.ReviewsCarousel {
+  position: relative;
+  margin: 0 48px;
+
+  @media (max-width: 1023px) {
+    margin: 0 -15px;
+  }
+}
+
+.Header {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  grid-template-areas:
+    'avatar username'
+    'avatar city';
+  column-gap: 16px;
+  row-gap: 4px;
+  margin-bottom: 20px;
+}
+
+.Avatar {
+  grid-area: avatar;
+  width: 44px;
+  height: 44px;
+
+  &::before {
+    padding-bottom: 100%;
+
+    @media (max-width: 1023px) {
+      padding-bottom: 100%;
+    }
+  }
+
+  img {
+    object-fit: contain;
+  }
+}
+
+.Title {
+  grid-area: username;
+  margin: 0 0 0;
+  font-size: var(--font-headline6);
+  font-weight: 600;
+  line-height: var(--line-headline6);
+}
+
+.City {
+  grid-area: city;
+  margin: 0 0 0;
+  font-size: var(--font-body12);
+  line-height: var(--line-body12);
+  color: var(--color-dark-gray);
+}
+
+.Text {
+  margin: 0 0 0;
+  font-size: var(--font-body14);
+  line-height: var(--line-body14);
+}
