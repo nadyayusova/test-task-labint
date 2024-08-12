@@ -1,0 +1,53 @@
+.Button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+
+  font-size: var(--font-headline5);
+  font-weight: 600;
+  line-height: var(--line-headline5);
+  text-align: center;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color var(--trans-default), border-color var(--trans-default);
+  will-change: background-color, border-color;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color-primary-hover);
+      border-color: var(--color-primary-hover);
+    }
+  }
+}
+
+.Blue {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color-primary-hover);
+      border-color: var(--color-primary-hover);
+    }
+  }
+}
+
+.Gray {
+  color: var(--color-black);
+  background-color: var(--color-light-gray);
+  border-color: var(--color-light-gray);
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color-white);
+      border-color: var(--color-mid-grey);
+    }
+  }
+}
