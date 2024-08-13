@@ -5,19 +5,21 @@ import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 import {swiperOptions} from './swiper-options';
-import {reviewsData} from './reviews-data';
 import {Container} from '../Container/Container';
 import {SwiperArrow} from '../Icons/swiper-arrow';
 import {Avatar} from './Avatar';
+import {useAppSelector} from '../../store/hook';
 
 const Reviews: FC = () => {
+  const reviews = useAppSelector(state => state.reviews.reviews);
+
   return (
     <section className={styles.Reviews}>
       <Container>
         <h2 className={styles.SectionTitle}>Отзывы</h2>
         <div className={styles.ReviewsCarousel}>
           <Swiper {...swiperOptions}>
-            {reviewsData.map((item) => {
+            {reviews.map((item) => {
               return (
                 <SwiperSlide key={item.id}>
                   {/* <div className=""> */}
